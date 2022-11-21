@@ -27,14 +27,14 @@ package main
 
 import "fmt"
 
-type Joy struct {
+type nuri struct {
 	name     string
 	id       int
 	position string
 	salary   int
 }
 
-func (a Joy) show() { // func ( receiver_name (actually it is for catching purpose)   Data_type_of_receiver ) metod name ( para_meter ) return type { }
+func (a nuri) show() { // func ( receiver_name (actually it is for catching purpose)   Data_type_of_receiver ) metod name ( para_meter ) return type { }
 
 	fmt.Println("Author's Name: ", a.name)
 	fmt.Println("Position Name: ", a.position)
@@ -43,7 +43,7 @@ func (a Joy) show() { // func ( receiver_name (actually it is for catching purpo
 
 }
 
-func (a *Joy) show_pointer(x string) {
+func (a *nuri) show_pointer(x string) {
 
 	a.position = x
 }
@@ -71,11 +71,11 @@ func(d1 int)multi(d2 int)int{
 
 func main() {
 
-	res := Joy{
-		name:     "joy",
-		id:       203,
+	res := nuri{
+		name:     "nuri",
+		id:       103,
 		position: "CSE",
-		salary:   45000,
+		salary:   43000,
 	}
 
 	res.show() // receiver. method name diye call korty hoi
@@ -115,13 +115,13 @@ import "fmt"
 func main() {
 	fmt.Println("methods in golang")
 
-	Joy := User{"Joy", "Joy@go.dev", true, 16}
-	fmt.Println(Joy)
-	fmt.Printf("Joy details are: %+v\n", Joy)
-	fmt.Printf("Name is %v and email is %v.\n", Joy.Name, Joy.Email)
-	Joy.joys_methods()
-	Joy.joy2_methods()
-	fmt.Printf("Name is %v and email is %v.\n", Joy.Name, Joy.Email)
+	Joy := User{"nuri", "nuri@go.dev", true, 16}
+	fmt.Println(nuri)
+	fmt.Printf("nuri details are: %+v\n", nuri)
+	fmt.Printf("Name is %v and email is %v.\n", nuri.Name, nuri.Email)
+	nuri.nuris_methods()
+	nuri.nuri2_methods()
+	fmt.Printf("Name is %v and email is %v.\n", nuri.Name, nuri.Email)
 
 }
 
@@ -132,11 +132,11 @@ type User struct {
 	Age    int
 }
 
-func (j User) joys_methods() { // passing user obj u  it can be anythings a b c ...z
+func (j User) nuris_methods() { // passing user obj u  it can be anythings a b c ...z
 	fmt.Println("Is user active: ", j.Name)
 }
 
-func (u User) joy2_methods() {
+func (u User) nuri2_methods() {
 	u.Email = "test@go.dev" // it change locally ..
 	fmt.Println("Email of this user is: ", u.Email)
 }
