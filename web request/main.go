@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-const url = "https://lco.dev"
+const url = "https://lco.dev" //web link
 
 func main() {
 	fmt.Println("Web request")
@@ -21,7 +21,7 @@ func main() {
 
 	defer response.Body.Close() // caller's responsibility to close the connection .. ones u request then you need to close it
 
-	databytes, err := ioutil.ReadAll(response.Body) // reading response
+	databytes, err := ioutil.ReadAll(response.Body) // reading response // here read all with body
 
 	if err != nil {
 		panic(err)
